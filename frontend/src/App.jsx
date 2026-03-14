@@ -1,12 +1,12 @@
 import {BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Register from "./pages/Register";
-import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
-import Send from "./pages/Send";
-import Request from "./pages/Request";
-import History from "./pages/History";
-import Profile from "./pages/Profile";
-import Success from "./pages/Success";
+import Register from "./pages/Register.jsx";
+import Login from "./pages/Login.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
+import Send from "./pages/Send.jsx";
+import Request from "./pages/Request.jsx";
+import History from "./pages/History.jsx";
+import Profile from "./pages/Profile.jsx";
+import Success from "./pages/Success.jsx";
 import "./App.css"
 
 function App() {

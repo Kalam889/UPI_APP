@@ -6,7 +6,7 @@ function Dashboard() {
     const [stores, setStore] = useState([])
     useEffect(() => {
         const token = localStorage.getItem("token")
-        fetch("http://127.0.0.1:5000/dashboard", {
+        fetch("http://upi-app-2.onrender.com/dashboard", {
             headers: {
                 "Authorization": "Bearer " + token
             }

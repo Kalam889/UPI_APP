@@ -5,7 +5,7 @@ function History() {
     const [history, setHistory] = useState([])
     useEffect(() => {
         const token = localStorage.getItem("token")
-        fetch("http://127.0.0.1:5000/transactions", {
+        fetch("http://upi-app-2.onrender.com/transactions", {
             headers: {
                 "Authorization": "Bearer " + token
             }

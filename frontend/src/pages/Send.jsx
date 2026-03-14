@@ -11,7 +11,7 @@ function Send() {
     function handleSend() {
             const token = localStorage.getItem("token");
 
-        fetch("http://127.0.0.1:5000/send",{
+        fetch("http://upi-app-2.onrender.com/send",{
             method: "POST",
             headers: { "Content-Type": "application/json",
                         "Authorization": "Bearer " + token },

@@ -5,8 +5,9 @@ function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+
      function handleLogin(){
-    fetch("http://127.0.0.1:5000/login",{
+    fetch("http://upi-app-2.onrender.com/login",{
       method: "POST",
       headers: {"Content-Type":"application/json"},
       body:JSON.stringify({username:username, password:password})

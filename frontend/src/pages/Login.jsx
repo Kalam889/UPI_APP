@@ -7,7 +7,7 @@ function Login() {
     const navigate = useNavigate();
 
      function handleLogin(){
-    fetch("https://upi-app-backend-t6ze.onrender.com//login",{
+    fetch("https://upi-app-backend-t6ze.onrender.com/login",{
       method: "POST",
       headers: {"Content-Type":"application/json"},
       body:JSON.stringify({username:username, password:password})

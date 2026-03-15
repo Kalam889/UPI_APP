@@ -11,7 +11,7 @@ function Send() {
     function handleSend() {
             const token = localStorage.getItem("token");
 
-        fetch("https://upi-app-backend-t6ze.onrender.com//send",{
+        fetch("https://upi-app-backend-t6ze.onrender.com/send",{
             method: "POST",
             headers: { "Content-Type": "application/json",
                         "Authorization": "Bearer " + token },

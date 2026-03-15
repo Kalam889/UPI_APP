@@ -8,7 +8,7 @@ function Register() {
 
     function handleRegister() {
 
-        fetch("https://upi-app-backend-t6ze.onrender.com//register",{
+        fetch("https://upi-app-backend-t6ze.onrender.com/register",{
 
       
             method:"POST",
@@ -17,7 +17,7 @@ function Register() {
         })
         .then(res => res.json())
         .then(data => {
-        console.log(data.message)
+        alert(data.message)
         })
         }
 

@@ -66,7 +66,7 @@ def register():
     password = data.get("password")
     password_bytes = password.encode("utf-8")
     salt = bcrypt.gensalt()
-    password_hashed = bcrypt.hashpw(password_bytes, salt)
+    password_hashed = bcrypt.hashpw(password_bytes, salt).decode("utf-8")
     upi_id = generate_upi(username)
     conn = get_database_connection()
     conn.execute("INSERT INTO users(username, email, password, upi_id, pin, wallet_balance) VALUES (?, ?, ?, ?, ?, ?)",(username, email, password_hashed, upi_id, "ok", 10000))
@@ -87,7 +87,7 @@ def login():
         return jsonify({"message":"User not found"})
     
     password_bytes = password.encode("utf-8")
-    if not bcrypt.checkpw(password_bytes, user["password"]):
+    if not bcrypt.checkpw(password_bytes, user["password"].encode("utf-8")):
         return jsonify({"message":"Incorrect password"})
     token = jwt.encode(
         {

@@ -9,7 +9,7 @@ function Request() {
     function handleRequest(){
     const token = localStorage.getItem("token")
 
-    fetch("http://upi-app-2.onrender.com/request",{
+    fetch("https://upi-app-backend-t6ze.onrender.com//request",{
         method:"POST",
         headers:{
             "Content-Type":"application/json",

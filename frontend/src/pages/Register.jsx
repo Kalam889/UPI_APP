@@ -7,7 +7,7 @@ function Register() {
     const [password, setPassword] = useState("");
 
     function handleRegister() {
-        fetch("http://upi-app-2.onrender.com/register",{
+        fetch("https://upi-app-2.onrender.com/register",{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify({username:username, email:email, password: password})
